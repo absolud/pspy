@@ -1,7 +1,8 @@
 '''generate_ps_script_support.py
 
+author: LG, Ludwig Geerman 2022 NL
 tested: Adobe Photoshop Version: 23.3.1
-os: windows
+os: win
 takes the ScriptSupport.8li library and converts it into a python file
 - used as reference
 '''
