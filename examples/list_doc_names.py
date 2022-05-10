@@ -1,7 +1,8 @@
 '''list_doc_names.py
 
+author: LG, Ludwig Geerman 2022 NL
 tested: Adobe Photoshop Version: 23.3.1
-os: windows
+os: win
 '''
 
 from win32com.client import Dispatch
