@@ -23,35 +23,40 @@ def s(name=None):
 
 def json_descriptor(key:str =None, save_file: bool=None):
     '''Extracts ps data as json encoded data'''
+
     app = Dispatch("Photoshop.Application")
-    
     d01 = Dispatch("Photoshop.ActionDescriptor")
     r01 = Dispatch("Photoshop.ActionReference")
     r01.PutEnumerated(s(key), s('ordinal'), s('targetEnum'))
-
     d01 = app.ExecuteActionGet(r01)
     result_d01 = Dispatch("Photoshop.ActionDescriptor")
     result_d01.PutObject(s('object'), s('object'), d01)
     json_d01 = app.ExecuteAction(s('convertJSONdescriptor'), result_d01, 3)
     json_result = json_d01.GetString(s('json'))
-
+    file = f'convert_json_descriptor_{key}.json'
     if save_file:
-        with open(f'convert_json_descriptor_{key}.json', 'w', encoding='utf-8') as f:
+        with open(file, 'w', encoding='utf-8') as f:
             data = json.loads(json_result.encode("utf-8"))
             json.dump(data, f, ensure_ascii=False, indent=4)
+            print(f'+ {file} saved')
     else:
+        print(f'\n+ {key} data:')
         pprint(json.loads(json_result.encode("utf-8")))
 
 
-json_descriptor('application', save_file=True)
-# requires a document to be selected
-json_descriptor('document', save_file=True)
-# requires a layer to be selected
-json_descriptor('layer', save_file=True)
+def main():
+    json_descriptor('application', save_file=True)
+    # requires a document to be selected
+    json_descriptor('document', save_file=True)
+    # requires a layer to be selected
+    json_descriptor('layer', save_file=True)
 
 
-# json_descriptor('application')
-# requires a document to be selected
-# json_descriptor('document')
-# requires a layer to be selected
-json_descriptor('layer')                        
+    # json_descriptor('application')
+    # requires a document to be selected
+    # json_descriptor('document')
+    # requires a layer to be selected
+    json_descriptor('layer')
+
+if __name__ == '__main__':
+    main()            
