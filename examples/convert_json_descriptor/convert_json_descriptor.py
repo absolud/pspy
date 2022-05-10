@@ -1,7 +1,7 @@
 """
 # convert_json_descriptor.py
 
-autor: LG
+author: LG
 tested: Adobe Photoshop Version: 23.3.1
 os: win
 
