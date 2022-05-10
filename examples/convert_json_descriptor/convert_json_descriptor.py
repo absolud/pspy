@@ -36,7 +36,7 @@ def json_descriptor(key:str =None, save_file: bool=None):
     json_result = json_d01.GetString(s('json'))
 
     if save_file:
-        with open(f'{key}.json', 'w', encoding='utf-8') as f:
+        with open(f'convert_json_descriptor_{key}.json', 'w', encoding='utf-8') as f:
             data = json.loads(json_result.encode("utf-8"))
             json.dump(data, f, ensure_ascii=False, indent=4)
     else:

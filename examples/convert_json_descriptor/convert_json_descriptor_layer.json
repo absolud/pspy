@@ -1,0 +1,187 @@
+{
+    "_obj": "object",
+    "animationProtection": {
+        "_obj": "animationProtection",
+        "animationPropagate": true,
+        "animationUnifyEffects": false,
+        "animationUnifyPosition": false,
+        "animationUnifyVisibility": false
+    },
+    "artboardEnabled": false,
+    "background": false,
+    "bounds": {
+        "_obj": "rectangle",
+        "bottom": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "height": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "left": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "right": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "top": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "width": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        }
+    },
+    "boundsNoEffects": {
+        "_obj": "rectangle",
+        "bottom": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "height": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "left": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "right": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "top": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "width": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        }
+    },
+    "boundsNoMask": {
+        "_obj": "rectangle",
+        "bottom": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "height": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "left": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "right": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "top": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        },
+        "width": {
+            "_unit": "pixelsUnit",
+            "_value": 0.0
+        }
+    },
+    "channelRestrictions": [
+        {
+            "_enum": "channel",
+            "_value": "red"
+        },
+        {
+            "_enum": "channel",
+            "_value": "grain"
+        },
+        {
+            "_enum": "channel",
+            "_value": "blue"
+        }
+    ],
+    "color": {
+        "_enum": "color",
+        "_value": "none"
+    },
+    "count": 4,
+    "fillEnabled": false,
+    "fillOpacity": 255,
+    "filterMaskDensity": 255,
+    "filterMaskFeather": 0.0,
+    "generatorSettings": {
+        "_obj": "generatorSettings"
+    },
+    "globalAngle": 90,
+    "group": false,
+    "hasFilterMask": false,
+    "hasUserMask": false,
+    "hasVectorMask": false,
+    "itemIndex": 2,
+    "keyOriginType": [],
+    "layerFXVisible": false,
+    "layerID": 4,
+    "layerKind": 1,
+    "layerLocking": {
+        "_obj": "layerLocking",
+        "protectAll": false,
+        "protectArtboardAutonest": false,
+        "protectComposite": false,
+        "protectPosition": false,
+        "protectTransparency": false
+    },
+    "layerPathComponentCount": 0,
+    "layerSection": {
+        "_enum": "layerSectionType",
+        "_value": "layerSectionContent"
+    },
+    "mode": {
+        "_enum": "blendMode",
+        "_value": "normal"
+    },
+    "name": "Layer 1",
+    "opacity": 255,
+    "parentLayerID": -1,
+    "preserveTransparency": false,
+    "proportionalScaling": false,
+    "targetChannels": [
+        {
+            "_index": 1,
+            "_ref": "channel"
+        },
+        {
+            "_index": 2,
+            "_ref": "channel"
+        },
+        {
+            "_index": 3,
+            "_ref": "channel"
+        }
+    ],
+    "textWarningLevel": 0,
+    "useAlignedRendering": false,
+    "userMaskDensity": 255,
+    "userMaskFeather": 0.0,
+    "vectorMaskDensity": 255,
+    "vectorMaskEmpty": true,
+    "vectorMaskFeather": 0.0,
+    "visible": true,
+    "visibleChannels": [
+        {
+            "_index": 1,
+            "_ref": "channel"
+        },
+        {
+            "_index": 2,
+            "_ref": "channel"
+        },
+        {
+            "_index": 3,
+            "_ref": "channel"
+        }
+    ]
+}
