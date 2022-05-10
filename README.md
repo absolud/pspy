@@ -10,8 +10,8 @@ The log file includes an array of actions and events Photoshop executed while we
 
 
 ## Examining the 'ScriptingListenerJS.log' file
-So first we need a converter that takes the log entries, filters out usable js code and transpile them to human-readable python functions.
-Excluding unusable entries. This is a list of things you would want to exlude:
+First we need a converter that takes the log entries, filters out usable js code and transpile these to human-readable python functions. Excluding unusable entries. 
+This is a list of things you would want to exlude:
 
 - "idhistoryStateChanged"
 - "idmodalStateChanged"
