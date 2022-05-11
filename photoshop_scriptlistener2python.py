@@ -543,7 +543,7 @@ class ScriptLogParser(object):
 
         export_file(Indenter().style(f'"""'))
         export_file(Indenter().style(
-            "LG Photoshop ScriptListenerJS to Pyhton"))
+            "Photoshop ScriptListenerJS to Pyhton"))
         if names:
             export_file(Indenter().style("- Overview functions"))
             export_file(Indenter().style(f"- {names}"))
