@@ -17,11 +17,11 @@ lg_scriptlistener_pyconverter will do this for you.
 Below an ignor-list of entries not relevant to us.
 
 - "idhistoryStateChanged"
+- "idExternalHistoryStateChanged"
 - "idmodalStateChanged"
 - "idinvokeCommand"
 - "idhomeScreenVisibilityChanged"
 - "idMRUFileListChanged"
-- "idAdobeScriptAutomation Scripts"
 - "idtoolModalStateChanged"
 - "invokeCommand"
 - "iduiInfo"
