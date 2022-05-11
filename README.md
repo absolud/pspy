@@ -2,7 +2,7 @@
 Photoshop scripting with python has a small community on discord https://discord.gg/VXFFy8FWVA
 
 By combining Python 3 and Photoshop we can interact with documents, layers, footage, images and text but we can also tap into hidden functionalities using action descriptors.
-Most of us have struggles with this topic. 'LG Photoshop ScriptListenerJS to Pyhton' converts Javascript action records into python functions. 
+Most of us struggle with this topic. 'LG Photoshop ScriptListenerJS to Pyhton' converts Javascript action records into python functions. 
 
 ## Photoshop action descriptors in python
 
