@@ -1,6 +1,6 @@
 # PSPY Photoshop scripting with Python
 
-'photoshop_scriptlistener_2_Python.py' transpiles Photoshop Javascript action records into Python functions including human-readable stringIDs. 
+'photoshop_scriptlistener2python.py' transpiles Photoshop Javascript action records into Python functions including human-readable stringIDs. 
 
 ## Photoshop action descriptors in Python
 
@@ -8,7 +8,7 @@ Action descriptor logic is pretty much hidden from us and because we won't neces
 
 ## Usage
 
-Assuming the 'ScriptingListenerJS.log' file is on the Desktop, run the photoshop_scriptlistener_2_Python.py script.
+Assuming the 'ScriptingListenerJS.log' file is on the Desktop, run the photoshop_scriptlistener2python.py script.
 
 A 'ScriptingListenerJS_Js2Py.py' file will be created on the Desktop
 
