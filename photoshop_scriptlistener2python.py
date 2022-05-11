@@ -10,7 +10,7 @@ LICENSE file in the root directory of this source tree.
 tested: Adobe Photoshop Version: 23.3.1
 os: win
 description: converts Photoshop's ScriptingListenerJS.log into human-readable python code. The ScriptingListenerJS.log file is usually saved to your desktop 
-The ScriptingListenerJSJs2Py.py file will also be saved to the same location of the log file
+The ScriptingListenerJSJs2Py.py file will also be saved to the same location as the log file
 '''
 import sys
 import re
@@ -549,8 +549,6 @@ class ScriptLogParser(object):
             export_file(Indenter().style(f"- {names}"))
         export_file(Indenter().style('"""'))
         export_file(Indenter().style(""))
-        export_file(Indenter().style("import sys"))
-        export_file(Indenter().style(""))
         export_file(
             Indenter().style("from win32com.client import Dispatch")
         )
@@ -568,8 +566,7 @@ class ScriptLogParser(object):
             )    
             export_file(
                 indent.style('return app.StringIDToTypeID(f"{name}")')
-            )
-        export_file(Indenter().style(""))    
+            )   
 
     def add_new_lines(self, lines):
         self._lines = lines
@@ -626,4 +623,4 @@ def main(log_file_path=None):
 if (__name__) == "__main__":
     user = Path.home().stem
     log_file_path = f'C:\\Users\\{user}\\Desktop\\ScriptingListenerJS.log'
-    main(log_file_path); #log_file_path
+    main(log_file_path=log_file_path)
