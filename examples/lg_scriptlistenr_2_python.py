@@ -1,6 +1,12 @@
-'''# lg_scriptlistenr_2_py.py
+'''
+Copyright (c) 2022, Ludwig Geerman
+All rights reserved.
 
-author: LG, Ludwig Geerman 2022 NL
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree. 
+
+# lg_scriptlistenr_2_python.py
+
 tested: Adobe Photoshop Version: 23.3.1
 os: win
 '''
