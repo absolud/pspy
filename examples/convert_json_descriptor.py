@@ -50,6 +50,7 @@ def main():
     json_descriptor('document', save_file=True)
     # requires a layer to be selected
     json_descriptor('layer', save_file=True)
+    json_descriptor('channel', save_file=True)
 
 
     # json_descriptor('application')
