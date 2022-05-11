@@ -1,10 +1,10 @@
 # pspy
-By combining Python 3 and Photoshop we can interact with documents, layers, footage, images and text but we can also tap into hidden functionalities using action descriptors.
-Most of us struggle with this topic. 'lg_scriptlistenr_2_python.py' converts Javascript action records into python functions. 
+By combining Python 3 and Photoshop we can not only interact with documents, layers, images and text, we can also tap into hidden functionalities using action descriptors.
+'lg_scriptlistener_2_Python.py' transpiles Photoshop Javascript action records into Python functions which include human-readable stringID. 
 
-## Photoshop action descriptors in python
+## Photoshop action descriptors in Python
 
-Action descriptors logic is pretty much hidden from us and because we won't necesseraly be able to structure descriptor code by intuition alone, a converter is essential to make sense of action descriptor structures. The log file 'ScriptingListenerJS.log' contains Javascript log entries of Photoshop's actions and events that has executed while we've been interacting with the application. By converting these entries into python functions you could further inspect, adjust and execute customized solutions.
+Action descriptor logic is pretty much hidden from us and because we won't necesseraly be able to structure descriptor code by intuition alone, a converter is essential to make sense of the action descriptor formatting and charID names. The 'ScriptingListenerJS.log' file we usually use as a reference contains Javascript log entries of Photoshop's actions and events that has executed while we've been interacting with the application. By filtering out the useful parts and converting these entries into Python functions you could further inspect, adjust and execute customized solutions in Photoshop.
 
 ## Excluded entries in the 'ScriptingListenerJS.log' file
 
@@ -34,4 +34,94 @@ Photoshop updates may introduce new editions from time to time which means that 
 
 ## Collaboration 
 
-Yes, please! Photoshop scripting with python has a small community on discord https://discord.gg/VXFFy8FWVA
+Yes, please! Photoshop scripting with Python has a small community on Discord https://discord.gg/VXFFy8FWVA
+
+## Example conversion
+
+Log entry
+```log
+// =======================================================
+var idsetd = charIDToTypeID( "setd" );
+    var desc422 = new ActionDescriptor();
+    var idnull = charIDToTypeID( "null" );
+        var ref15 = new ActionReference();
+        var idAdjL = charIDToTypeID( "AdjL" );
+        var idOrdn = charIDToTypeID( "Ordn" );
+        var idTrgt = charIDToTypeID( "Trgt" );
+        ref15.putEnumerated( idAdjL, idOrdn, idTrgt );
+    desc422.putReference( idnull, ref15 );
+    var idT = charIDToTypeID( "T   " );
+        var desc423 = new ActionDescriptor();
+        var idpresetKind = stringIDToTypeID( "presetKind" );
+        var idpresetKindType = stringIDToTypeID( "presetKindType" );
+        var idpresetKindCustom = stringIDToTypeID( "presetKindCustom" );
+        desc423.putEnumerated( idpresetKind, idpresetKindType, idpresetKindCustom );
+        var idAdjs = charIDToTypeID( "Adjs" );
+            var list12 = new ActionList();
+                var desc424 = new ActionDescriptor();
+                var idLclR = charIDToTypeID( "LclR" );
+                desc424.putInteger( idLclR, 1 );
+                var idBgnR = charIDToTypeID( "BgnR" );
+                desc424.putInteger( idBgnR, 315 );
+                var idBgnS = charIDToTypeID( "BgnS" );
+                desc424.putInteger( idBgnS, 345 );
+                var idEndS = charIDToTypeID( "EndS" );
+                desc424.putInteger( idEndS, 15 );
+                var idEndR = charIDToTypeID( "EndR" );
+                desc424.putInteger( idEndR, 45 );
+                var idH = charIDToTypeID( "H   " );
+                desc424.putInteger( idH, 0 );
+                var idStrt = charIDToTypeID( "Strt" );
+                desc424.putInteger( idStrt, -7 );
+                var idLght = charIDToTypeID( "Lght" );
+                desc424.putInteger( idLght, 0 );
+            var idHsttwo = charIDToTypeID( "Hst2" );
+            list12.putObject( idHsttwo, desc424 );
+        desc423.putList( idAdjs, list12 );
+    var idHStr = charIDToTypeID( "HStr" );
+    desc422.putObject( idT, idHStr, desc423 );
+executeAction( idsetd, desc422, DialogModes.NO );
+
+```
+
+Transpiled
+```py
+"""
+LG Photoshop ScriptListenerJS to Python
+"""
+
+
+from win32com.client import Dispatch
+
+
+def s(name):
+    '''convert string name into type id'''
+    app = Dispatch("Photoshop.Application")
+    return app.StringIDToTypeID(f"{name}")
+
+def set_1():
+    app = Dispatch("Photoshop.Application")
+    desc422 = Dispatch("Photoshop.ActionDescriptor")
+    ref15 = Dispatch("Photoshop.ActionReference")
+    desc423 = Dispatch("Photoshop.ActionDescriptor")
+    list12 = Dispatch("Photoshop.ActionList")
+    desc424 = Dispatch("Photoshop.ActionDescriptor")
+    ref15.PutEnumerated(s("adjustmentLayer"), s("ordinal"), s("targetEnum"))
+    desc422.PutReference(s("target"),  ref15)
+    desc423.PutEnumerated(s("presetKind"), s("presetKindType"), s("presetKindCustom"))
+    desc424.PutInteger(s("localRange"),  1)
+    desc424.PutInteger(s("beginRamp"),  315)
+    desc424.PutInteger(s("beginSustain"),  345)
+    desc424.PutInteger(s("endSustain"),  15)
+    desc424.PutInteger(s("endRamp"),  45)
+    desc424.PutInteger(s("hue"),  0)
+    desc424.PutInteger(s("saturation"),  -7)
+    desc424.PutInteger(s("lightness"),  0)
+    list12.PutObject(s("hueSatAdjustmentV2"),  desc424)
+    desc423.PutList(s("adjustment"),  list12)
+    desc422.PutObject(s("to"), s("hueSaturation"),  desc423)
+    app.ExecuteAction(s("set"), desc422, 3)
+
+
+set_1()
+```
