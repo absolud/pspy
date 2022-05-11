@@ -589,7 +589,11 @@ class ScriptLogParser(object):
 
 
     def add_new_lines(self, lines):
-        '''stores lines globally'''
+        '''temporarely stores a collection of lines globally
+
+        Args:
+            lines (list): [code lines]
+        '''
         self._lines = lines
     
     def get_actions(self, idx):
@@ -597,7 +601,12 @@ class ScriptLogParser(object):
         return self._get_actions(idx)
 
     def generate_code(self, action, file=None):
-        '''Generates the action descriptor functions'''
+        '''Generates the action descriptor functions
+
+        Args:
+            action (dict): [keys - descriptors, datatypes, execute, name]
+            file (io, optional): file to write to. Defaults to None.
+        '''
         export_file = msg
         if file:
             export_file = file.write
