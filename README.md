@@ -1,5 +1,6 @@
 # pspy
 Photoshop scripting with python has a small community on discord https://discord.gg/VXFFy8FWVA
+
 With the combination of Python and Photoshop we can interact with documents, layers, footage, images, and text but we can also tap into hidden functionalities by executing action descriptors. 
 
 ## Photoshop action descriptors in python
@@ -12,7 +13,7 @@ Some entries are useless to us and some include actions usually not accessible t
 
 lg_scriptlistener_pyconverter will do this for you.
 
-Below an ignor-list of entries not relevant to us. Photoshop updates may introduce new editions from time to time which means that the ignore-list would need to be extended with these added id strings:
+Below an ignor-list of entries not relevant to us.
 
 - "idhistoryStateChanged"
 - "idmodalStateChanged"
@@ -32,3 +33,4 @@ Below an ignor-list of entries not relevant to us. Photoshop updates may introdu
 - "idhostFocusChanged"
 - "idAdobeScriptAutomationScripts" 
  
+Photoshop updates may introduce new editions from time to time which means that the ignore-list would need to be extended with these new actions or events deemed irrelevant:
