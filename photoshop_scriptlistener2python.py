@@ -614,12 +614,11 @@ class ScriptLogParser(object):
         return self._get_actions(idx)
 
     def generate_code(self, action, file=None):
+        '''Generates the action descriptor functions'''
         export_file = msg
         if file:
             export_file = file.write
-
         code = action
- 
         export_file(Indenter().style(""))
         export_file(Indenter().style(f'def {code["name"]}():'))
         with Indenter() as indent:
@@ -628,7 +627,6 @@ class ScriptLogParser(object):
             for action in code["datatypes"]:
                 export_file(indent.style(action))
             export_file(indent.style(code["execute"]))
-
         export_file(Indenter().style(""))
         export_file(Indenter().style(f'{code["name"]}()'))
 
@@ -647,7 +645,6 @@ def main(log_file_path=None):
     with open(new_file_path, 'w') as f:
         parser = ScriptLogParser()
         parser.boilerplate_code(file=f) # file=f
-
         for idx, action in enumerate(content):
             parser.add_new_lines(action)
             actions_transpiled = parser.get_actions(idx)
@@ -656,6 +653,7 @@ def main(log_file_path=None):
     
 
 if (__name__) == "__main__":
+ 
     user = Path.home().stem
     log_file_path = f'C:\\Users\\{user}\\Desktop\\ScriptingListenerJS.log'
     main(log_file_path=log_file_path)
