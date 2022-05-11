@@ -66,11 +66,12 @@ class ScriptLogLoader(object):
     def _ignore_list(self):
         return [
             "idhistoryStateChanged",
+            "idExternalHistoryStateChanged",
             "idmodalStateChanged",
             "idinvokeCommand",
             "idhomeScreenVisibilityChanged",
             "idMRUFileListChanged",
-            "idAdobeScriptAutomation Scripts",
+            # "idAdobeScriptAutomation Scripts",
             "idtoolModalStateChanged",
             "invokeCommand",
             "iduiInfo",
@@ -619,5 +620,5 @@ def main(log_file_path=None):
     
 
 if (__name__) == "__main__":
-    log_file_path = r'C:\Users\MFPro\Desktop\ScriptingListenerJS.log'
+    log_file_path = f'C:\\Users\\MFPro\\Desktop\\ScriptingListenerJS.log'
     main(log_file_path); #log_file_path
