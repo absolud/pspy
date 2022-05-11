@@ -100,7 +100,8 @@ class ScriptLogLoader(object):
             "identerModalWorkspace",
             "idneuralGalleryFilters",
             "idhostFocusChanged",
-            "idAdobeScriptAutomationScripts"]
+            "idAdobeScriptAutomationScripts",
+            "idnglProfileChanged"]
 
     def _browse(self):
         allowed_file = "JS.log"
