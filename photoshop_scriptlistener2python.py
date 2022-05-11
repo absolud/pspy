@@ -101,7 +101,8 @@ class ScriptLogLoader(object):
             "idneuralGalleryFilters",
             "idhostFocusChanged",
             "idAdobeScriptAutomationScripts",
-            "idnglProfileChanged"]
+            "idnglProfileChanged",
+            "idpluginRun"]
 
     def _browse(self):
         allowed_file = "JS.log"
@@ -595,6 +596,7 @@ class ScriptLogParser(object):
             export_file(indent.style("'''Photoshop dialog windows settings using \"all\": 1, \"error\": 2, \"no\": 3'''"))    
             export_file(indent.style('dialogs = ps_display_dialogs()'))    
             export_file(indent.style('return dialogs.get(dialog_type, lambda: None)'))
+        export_file(Indenter().style(""))
 
     def add_new_lines(self, lines):
         '''temporarely stores a collection of lines globally
