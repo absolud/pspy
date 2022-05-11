@@ -9,6 +9,8 @@ LICENSE file in the root directory of this source tree.
 
 tested: Adobe Photoshop Version: 23.3.1
 os: win
+description: converts a photoshop's generated ScriptingListenerJS.log into python code
+The ScriptingListenerJS.log file is usually saved to your desktop 
 '''
 import sys
 import re
@@ -575,29 +577,15 @@ class ScriptLogParser(object):
         export_file(Indenter().style(""))
         export_file(Indenter().style(f'def {code["name"]}():'))
         with Indenter() as indent:
-            # with indent:
-            # export_file(
-            #     indent.style(f'am = ActionManager("{code["name"]}")')
-            # )
-            # export_file(
-            #     indent.style(
-            #         'app, s, c, dialog = am.app(), am.s, am.c, am.dialog')
-            # )
-            # export_file(
-            #     indent.style('with am:')
-            # )
             export_file(
                 indent.style('app = Dispatch("Photoshop.Application")')
             )
-            # with indent:
             for desc in code["descriptors"]:
                 export_file(indent.style(desc))
-            # if len(code["descriptors"]):
-            #     export_file(indent.style("with am:"))
-            # with indent:
             for action in code["datatypes"]:
                 export_file(indent.style(action))
             export_file(indent.style(code["execute"]))
+
         export_file(Indenter().style(""))
         export_file(Indenter().style(""))
         export_file(Indenter().style(f'{code["name"]}()'))
