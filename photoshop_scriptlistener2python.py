@@ -537,80 +537,63 @@ class ScriptLogParser(object):
                 count += 1
 
     def boilerplate_code(self, names=None, file=None):
+        '''Generates upper part of the boilerplate code
+        
+        Constructs code including indentation
+        Args:
+            names (list, optional): list of function names. Defaults to None.
+            file (io, optional): file o write to. Defaults to None.
+        '''
         export_file = msg
         if file:
             export_file = file.write
-
+        # start py doc boilerplate code and indenting
         export_file(Indenter().style(f'"""'))
-        export_file(Indenter().style(
-            "Photoshop ScriptListenerJS to Pyhton"))
+        export_file(Indenter().style("Photoshop ScriptListenerJS to Pyhton"))
+        # list function names if true
         if names:
             export_file(Indenter().style("- Overview functions"))
             export_file(Indenter().style(f"- {names}"))
         export_file(Indenter().style('"""'))
-        export_file(
-            Indenter().style("from win32com.client import Dispatch")
-        )
+        # imports
+        export_file(Indenter().style("from win32com.client import Dispatch"))
         export_file(Indenter().style(""))
         export_file(Indenter().style(""))
-        export_file(
-            Indenter().style('app = Dispatch("Photoshop.Application")')
-        )
+        # global app reference
+        export_file(Indenter().style('app = Dispatch("Photoshop.Application")'))
         export_file(Indenter().style(""))
-        export_file(
-            Indenter().style("def s(name):")
-        )
+        # required string to type id converter function
+        export_file(().style("def s(name):"))
         with Indenter() as indent:
-            export_file(
-                indent.style("'''convert string name into type id'''")
-            )    
-    
-            export_file(
-                indent.style('return app.StringIDToTypeID(f"{name}")')
-            )  
+            export_file(indent.style("'''convert string name into type id'''"))    
+            export_file(indent.style('return app.StringIDToTypeID(f"{name}")'))  
         export_file(Indenter().style(""))
-        export_file(
-            Indenter().style("def c(name):")
-        )
+        # required charid to type id converter function
+        export_file(Indenter().style("def c(name):"))
         with Indenter() as indent:
-            export_file(
-                indent.style("'''convert char name into type id'''")
-            )        
-            export_file(
-                indent.style('return app.CharIDToTypeID(f"{name}")')
-            )
+            export_file(indent.style("'''convert char name into type id'''"))        
+            export_file(indent.style('return app.CharIDToTypeID(f"{name}")'))
         export_file(Indenter().style(""))
-        
-        export_file(
-            Indenter().style('def ps_display_dialogs():')
-        )
+        # required dialog constants
+        export_file(Indenter().style('def ps_display_dialogs():'))
         with Indenter() as indent:
-            export_file(
-                indent.style("'''Dictionary with dialog constants'''")
-            )    
-            export_file(
-                indent.style('return {"all": 1, "error": 2, "no": 3}')
-            )    
+            export_file(indent.style("'''Dictionary with dialog constants'''"))    
+            export_file(indent.style('return {"all": 1, "error": 2, "no": 3}'))    
         export_file(Indenter().style(""))
-        export_file(
-            Indenter().style('def dialog(dialog_type="no"):')
-        )
+        # required dialog function
+        export_file(Indenter().style('def dialog(dialog_type="no"):'))
         with Indenter() as indent:
-            export_file(
-                indent.style("'''Photoshop dialog windows settings using \"all\": 1, \"error\": 2, \"no\": 3'''")
-            )    
-            export_file(
-                indent.style('dialogs = ps_display_dialogs()')
-            )    
-            export_file(
-                indent.style('return dialogs.get(dialog_type, lambda: None)')
-            )
+            export_file(indent.style("'''Photoshop dialog windows settings using \"all\": 1, \"error\": 2, \"no\": 3'''"))    
+            export_file(indent.style('dialogs = ps_display_dialogs()'))    
+            export_file(indent.style('return dialogs.get(dialog_type, lambda: None)'))
 
 
     def add_new_lines(self, lines):
+        '''stores lines globally'''
         self._lines = lines
     
     def get_actions(self, idx):
+        '''returns a usable action fromt the filtered log'''
         return self._get_actions(idx)
 
     def generate_code(self, action, file=None):
