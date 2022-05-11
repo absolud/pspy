@@ -619,7 +619,7 @@ class ScriptLogParser(object):
             export_file = file.write
 
         code = action
-        export_file(Indenter().style(""))
+ 
         export_file(Indenter().style(""))
         export_file(Indenter().style(f'def {code["name"]}():'))
         with Indenter() as indent:
@@ -629,7 +629,6 @@ class ScriptLogParser(object):
                 export_file(indent.style(action))
             export_file(indent.style(code["execute"]))
 
-        export_file(Indenter().style(""))
         export_file(Indenter().style(""))
         export_file(Indenter().style(f'{code["name"]}()'))
 
