@@ -4,7 +4,7 @@
 
 ## Photoshop action descriptors in Python
 
-Action descriptor logic is pretty much hidden from us and because we won't necesseraly be able to structure descriptor code by intuition alone, a converter is essential to make sense of the action descriptor formatting and charID names. The 'ScriptingListenerJS.log' file we usually use as a reference contains Javascript log entries of Photoshop's actions and events that has executed while we've been interacting with the application. By filtering out the useful parts and converting these entries into Python functions you could further inspect, adjust and execute customized solutions in Photoshop.
+Action descriptor logic is pretty much hidden from us and because we won't necesseraly be able to structure descriptor code by intuition alone, a converter is essential to make sense of the action descriptor formatting and charID names. The 'ScriptingListenerJS.log' file we usually use as a reference contains Javascript log entries of Photoshop's actions and events that executed while we've been interacting with the application. By filtering out the useful parts and converting these entries into Python functions you could further inspect, adjust and execute customized solutions in Photoshop.
 
 ## Usage
 
