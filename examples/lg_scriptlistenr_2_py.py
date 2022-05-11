@@ -72,7 +72,6 @@ class ScriptLogLoader(object):
             "idinvokeCommand",
             "idhomeScreenVisibilityChanged",
             "idMRUFileListChanged",
-            # "idAdobeScriptAutomation Scripts",
             "idtoolModalStateChanged",
             "invokeCommand",
             "iduiInfo",
