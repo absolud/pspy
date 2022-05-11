@@ -1,4 +1,4 @@
-# PSPY Photoshop scripting with Python
+# photoshop scriptlistener to python
 
 'photoshop_scriptlistener2python.py' converts Photoshop Javascript action records into Python functions including human-readable stringIDs. 
 
