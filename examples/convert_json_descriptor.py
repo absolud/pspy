@@ -8,7 +8,9 @@ os: win
 Convert ps data as json encoded data. 
 Saves it as a json file using the key as the file name or prints results to the console
 - saves json_descriptor(key:str, save_file:bool=None)
-- current keys that work: application, document, layer
+- current keys that work: 
+    application, document, layer, 
+    adjustmentLayer, channel, textLayer
 """
 import json
 from pprint import pprint
@@ -47,10 +49,14 @@ def json_descriptor(key:str =None, save_file: bool=None):
 def main():
     json_descriptor('application', save_file=True)
     # requires a document to be selected
-    json_descriptor('document', save_file=True)
+    # json_descriptor('document', save_file=True)
     # requires a layer to be selected
-    json_descriptor('layer', save_file=True)
-    json_descriptor('channel', save_file=True)
+    # json_descriptor('layer', save_file=True)
+    # requires a adjustmentlayer to be selected
+    # json_descriptor('adjustmentLayer', save_file=True)
+    # requires a textlayer to be selected
+    # json_descriptor('textLayer', save_file=True)
+    
 
 
     # json_descriptor('application')
