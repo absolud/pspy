@@ -6,6 +6,7 @@ os: win
 '''
 import sys
 import re
+import os
 from functools import wraps
 from pprint import pprint
 import cProfile, pstats, io
@@ -620,5 +621,5 @@ def main(log_file_path=None):
     
 
 if (__name__) == "__main__":
-    log_file_path = f'C:\\Users\\MFPro\\Desktop\\ScriptingListenerJS.log'
+    log_file_path = f'C:\\Users\\{os.getlogin()}\\Desktop\\ScriptingListenerJS.log'
     main(log_file_path); #log_file_path
