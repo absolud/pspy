@@ -571,7 +571,7 @@ class ScriptLogParser(object):
         export_file(Indenter().style('app = Dispatch("Photoshop.Application")'))
         export_file(Indenter().style(""))
         # required string to type id converter function
-        export_file(().style("def s(name):"))
+        export_file(Indenter().style("def s(name):"))
         with Indenter() as indent:
             export_file(indent.style("'''convert string name into type id'''"))    
             export_file(indent.style('return app.StringIDToTypeID(f"{name}")'))  
