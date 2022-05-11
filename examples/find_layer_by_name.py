@@ -11,13 +11,14 @@ from win32com.client import Dispatch
 
 def find_layer_by_name(search: str, layers=None):
     for layer in layers:
-        if search==layer.name:
-            print(f'first match found: {layer.name}')
+        if search==layer.Name:
+            print(f'first match found: {layer.Name}')
             break
         if layer.LayerType == 2:
             sub_layers = layer.Layers
             find_layer_by_name(search, sub_layers)
-
+  
+        
 
 ps = Dispatch("Photoshop.Application")
 doc = ps.ActiveDocument
