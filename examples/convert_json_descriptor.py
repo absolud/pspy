@@ -47,23 +47,40 @@ def json_descriptor(key:str =None, save_file: bool=None):
 
 
 def main():
+    # SAVE TO JSON
     json_descriptor('application', save_file=True)
+
     # requires a document to be selected
     # json_descriptor('document', save_file=True)
+
     # requires a layer to be selected
     # json_descriptor('layer', save_file=True)
-    # requires a adjustmentlayer to be selected
+
+    # requires an adjustmentlayer to be selected
     # json_descriptor('adjustmentLayer', save_file=True)
+
     # requires a textlayer to be selected
     # json_descriptor('textLayer', save_file=True)
     
 
-
+    
+    # PRINT TO CONSOLE
     # json_descriptor('application')
+
     # requires a document to be selected
     # json_descriptor('document')
+
     # requires a layer to be selected
     json_descriptor('layer')
+    
+    # requires a channel to be selected
+    json_descriptor('channel')
+
+    # requires an adjustmentLayer to be selected
+    # json_descriptor('adjustmentlayer')
+
+    # requires a textLayer to be selected
+    # json_descriptor('textLayer')
 
 if __name__ == '__main__':
     main()            
