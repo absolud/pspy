@@ -1,16 +1,10 @@
 # PSPY Photoshop scripting with Python
 
-'photoshop_scriptlistener2python.py' transpiles Photoshop Javascript action records into Python functions including human-readable stringIDs. 
-
-## Photoshop action descriptors in Python
-
-Action descriptor logic is pretty much hidden from us and because we won't necesseraly be able to structure descriptor code by intuition alone, a converter is essential to make sense of the action descriptor formatting and charID names. The 'ScriptingListenerJS.log' file we usually use as a reference contains Javascript log entries of Photoshop's actions and events that executed while we've been interacting with the application. By filtering out the useful parts and converting these entries into Python functions you could further inspect, adjust and execute customized solutions in Photoshop.
+'photoshop_scriptlistener2python.py' converts Photoshop Javascript action records into Python functions including human-readable stringIDs. 
 
 ## Usage
 
-Assuming the 'ScriptingListenerJS.log' file is on the Desktop, run the photoshop_scriptlistener2python.py script.
-
-A 'ScriptingListenerJS_Js2Py.py' file will be created on the Desktop
+Assuming the 'ScriptingListenerJS.log' file is on the Desktop, run the photoshop_scriptlistener2python.py script. A 'ScriptingListenerJS_Js2Py.py' file will be created on the Desktop
 
 ## Example conversion
 
@@ -104,8 +98,6 @@ set_1()
 
 ## Excluded entries in the 'ScriptingListenerJS.log' file
 
-Some entries are useless to us and some include actions usually not accessible through regular actions in Photoshop, thus giving us access to hidden functionality we can edit and customize. 
-
 Below the ignore-list of entries not relevant to us.
 
 - "idhistoryStateChanged"
@@ -126,7 +118,6 @@ Below the ignore-list of entries not relevant to us.
 - "idhostFocusChanged"
 - "idAdobeScriptAutomationScripts" 
  
-Photoshop updates may introduce new entries from time to time which means that the ignore-list would need to be extended with these new actions or events deemed irrelevant. If for some reason you want to include one of these excluded actions back into the search, just comment it out in the script. A small few may trigger convertion errors if included.
 
 ## Collaboration 
 
