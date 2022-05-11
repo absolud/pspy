@@ -1,40 +1,16 @@
-# pspy
-By combining Python 3 and Photoshop we can not only interact with documents, layers, images and text, we can also tap into hidden functionalities using action descriptors.
-'lg_scriptlistener_2_Python.py' transpiles Photoshop Javascript action records into Python functions which include human-readable stringID. 
+# PSPY Photoshop scripting with Python
+
+'lg_scriptlistener_2_Python.py' transpiles Photoshop Javascript action records into Python functions including human-readable stringIDs. 
 
 ## Photoshop action descriptors in Python
 
 Action descriptor logic is pretty much hidden from us and because we won't necesseraly be able to structure descriptor code by intuition alone, a converter is essential to make sense of the action descriptor formatting and charID names. The 'ScriptingListenerJS.log' file we usually use as a reference contains Javascript log entries of Photoshop's actions and events that has executed while we've been interacting with the application. By filtering out the useful parts and converting these entries into Python functions you could further inspect, adjust and execute customized solutions in Photoshop.
 
-## Excluded entries in the 'ScriptingListenerJS.log' file
+## Usage
 
-Some entries are useless to us and some include actions usually not accessible through regular actions in Photoshop, thus giving us access to hidden functionality we can edit and customize. 
+Assuming the ScriptingListener is running and the 'ScriptingListenerJS.log' file is on the Desktop, run the lg_scriptlistener_2_Python script.
 
-Below an ignor-list of entries not relevant to us.
-
-- "idhistoryStateChanged"
-- "idExternalHistoryStateChanged"
-- "idmodalStateChanged"
-- "idinvokeCommand"
-- "idhomeScreenVisibilityChanged"
-- "idMRUFileListChanged"
-- "idtoolModalStateChanged"
-- "invokeCommand"
-- "iduiInfo"
-- "idfeatureInfo"
-- "idowlAction"
-- "idlayersFiltered"
-- "idLoadedPluginsNames"
-- "identerModalWorkspace"
-- "idneuralGalleryFilters"
-- "idhostFocusChanged"
-- "idAdobeScriptAutomationScripts" 
- 
-Photoshop updates may introduce new editions from time to time which means that the ignore-list would need to be extended with these new actions or events deemed irrelevant. If for some reason you want to include one of these actions, just comment it out in the script. A small few may trigger convertion errors if included.
-
-## Collaboration 
-
-Yes, please! Photoshop scripting with Python has a small community on Discord https://discord.gg/VXFFy8FWVA
+a 'ScriptingListenerJS_Js2Py.py' file will be created on the Desktop
 
 ## Example conversion
 
@@ -125,3 +101,34 @@ def set_1():
 
 set_1()
 ```
+
+## Excluded entries in the 'ScriptingListenerJS.log' file
+
+Some entries are useless to us and some include actions usually not accessible through regular actions in Photoshop, thus giving us access to hidden functionality we can edit and customize. 
+
+Below the ignore-list of entries not relevant to us.
+
+- "idhistoryStateChanged"
+- "idExternalHistoryStateChanged"
+- "idmodalStateChanged"
+- "idinvokeCommand"
+- "idhomeScreenVisibilityChanged"
+- "idMRUFileListChanged"
+- "idtoolModalStateChanged"
+- "invokeCommand"
+- "iduiInfo"
+- "idfeatureInfo"
+- "idowlAction"
+- "idlayersFiltered"
+- "idLoadedPluginsNames"
+- "identerModalWorkspace"
+- "idneuralGalleryFilters"
+- "idhostFocusChanged"
+- "idAdobeScriptAutomationScripts" 
+ 
+Photoshop updates may introduce new entries from time to time which means that the ignore-list would need to be extended with these new actions or events deemed irrelevant. If for some reason you want to include one of these excluded actions back into the search, just comment it out in the script. A small few may trigger convertion errors if included.
+
+## Collaboration 
+
+Yes, please! Photoshop scripting with Python has a small community on Discord https://discord.gg/VXFFy8FWVA
+
