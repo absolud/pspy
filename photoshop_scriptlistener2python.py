@@ -497,7 +497,7 @@ class ScriptLogParser(object):
                 allow_in_group = True
                 self._vars["false"] = "False"
                 self._vars["true"] = "True"
-                self._vars["DialogModes.NO"] = " 3"
+                self._vars["DialogModes.NO"] = " dialog()"
                 self._vars["undefined"] = "None"
                 collected_descriptors = []
                 collected_datatypes = []
@@ -548,11 +548,14 @@ class ScriptLogParser(object):
             export_file(Indenter().style("- Overview functions"))
             export_file(Indenter().style(f"- {names}"))
         export_file(Indenter().style('"""'))
-        export_file(Indenter().style(""))
         export_file(
             Indenter().style("from win32com.client import Dispatch")
         )
         export_file(Indenter().style(""))
+        export_file(Indenter().style(""))
+        export_file(
+            Indenter().style('app = Dispatch("Photoshop.Application")')
+        )
         export_file(Indenter().style(""))
         export_file(
             Indenter().style("def s(name):")
@@ -561,12 +564,48 @@ class ScriptLogParser(object):
             export_file(
                 indent.style("'''convert string name into type id'''")
             )    
-            export_file(
-                indent.style('app = Dispatch("Photoshop.Application")')
-            )    
+    
             export_file(
                 indent.style('return app.StringIDToTypeID(f"{name}")')
-            )   
+            )  
+        export_file(Indenter().style(""))
+        export_file(
+            Indenter().style("def c(name):")
+        )
+        with Indenter() as indent:
+            export_file(
+                indent.style("'''convert char name into type id'''")
+            )        
+            export_file(
+                indent.style('return app.CharIDToTypeID(f"{name}")')
+            )
+        export_file(Indenter().style(""))
+        
+        export_file(
+            Indenter().style('def ps_display_dialogs():')
+        )
+        with Indenter() as indent:
+            export_file(
+                indent.style("'''Dictionary with dialog constants'''")
+            )    
+            export_file(
+                indent.style('return {"all": 1, "error": 2, "no": 3}')
+            )    
+        export_file(Indenter().style(""))
+        export_file(
+            Indenter().style('def dialog(dialog_type="no"):')
+        )
+        with Indenter() as indent:
+            export_file(
+                indent.style("'''Photoshop dialog windows settings using \"all\": 1, \"error\": 2, \"no\": 3'''")
+            )    
+            export_file(
+                indent.style('dialogs = ps_display_dialogs()')
+            )    
+            export_file(
+                indent.style('return dialogs.get(dialog_type, lambda: None)')
+            )
+
 
     def add_new_lines(self, lines):
         self._lines = lines
@@ -584,9 +623,6 @@ class ScriptLogParser(object):
         export_file(Indenter().style(""))
         export_file(Indenter().style(f'def {code["name"]}():'))
         with Indenter() as indent:
-            export_file(
-                indent.style('app = Dispatch("Photoshop.Application")')
-            )
             for desc in code["descriptors"]:
                 export_file(indent.style(desc))
             for action in code["datatypes"]:
