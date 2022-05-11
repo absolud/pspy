@@ -156,7 +156,8 @@ Below the ignore-list of entries not relevant to us.
 - "identerModalWorkspace"
 - "idneuralGalleryFilters"
 - "idhostFocusChanged"
-- "idAdobeScriptAutomationScripts" 
+- "idAdobeScriptAutomationScripts"
+- "idnglProfileChanged" 
  
 
 ## Collaboration 
