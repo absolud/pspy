@@ -483,6 +483,14 @@ class ScriptLogParser(object):
         return _line
 
     def _get_actions(self, groupnum):
+        '''AI is creating summary for _get_actions
+
+        Args:
+            groupnum (int): current number id
+
+        Yields:
+            dict:   "id", "name", "descriptors", "datatypes", "execute"
+        '''
         regex = self._regex
         compile_ = self._compile
         pattern_start = compile_(regex['start'])
@@ -492,7 +500,8 @@ class ScriptLogParser(object):
         allow_in_group = False
         group_count = groupnum
         action_group = {}
-        for idx, line in enumerate(self._lines):
+        lines = self._lines
+        for idx, line in enumerate(lines):
             if pattern_start.match(line):
                 allow_in_group = True
                 self._vars["false"] = "False"
@@ -533,7 +542,6 @@ class ScriptLogParser(object):
 
                 if "Dispatch(" in converted_line:
                     collected_descriptors.append(converted_line)
-
                 count += 1
 
     def boilerplate_code(self, names=None, file=None):
@@ -586,7 +594,6 @@ class ScriptLogParser(object):
             export_file(indent.style("'''Photoshop dialog windows settings using \"all\": 1, \"error\": 2, \"no\": 3'''"))    
             export_file(indent.style('dialogs = ps_display_dialogs()'))    
             export_file(indent.style('return dialogs.get(dialog_type, lambda: None)'))
-
 
     def add_new_lines(self, lines):
         '''temporarely stores a collection of lines globally
