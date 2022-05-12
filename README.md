@@ -9,6 +9,10 @@ The generated python file is not made to be run. It may run in some cases but th
 Assuming the 'ScriptingListenerJS.log' file is on the Desktop, run the photoshop_scriptlistener2python.py script. 
 Generates 'ScriptingListenerJS_Js2Py.py' on your Desktop
 
+```shell
+python photoshop_scriptlistener2python.py
+```
+
 ## Example conversion
 
 Log entry
