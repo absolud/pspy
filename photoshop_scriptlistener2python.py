@@ -7,7 +7,7 @@ LICENSE file in the root directory of this source tree.
 
 # photoshop_scriptlistener2python.py
 
-tested: Adobe Photoshop Version: 23.3.1
+tested: Adobe Photoshop Version: 23.3.2
 os: win
 description: converts Photoshop's ScriptingListenerJS.log into human-readable python code. The ScriptingListenerJS.log file is usually saved to your desktop 
 The ScriptingListenerJSJs2Py.py file will also be saved to the same location as the log file
