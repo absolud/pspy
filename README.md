@@ -17,7 +17,7 @@ python photoshop_scriptlistener2python.py
 
 ## Example conversion
 
-Log entry
+source: ScriptingListenerJS.log
 ```log
 // =======================================================
 var idpluginRun = stringIDToTypeID( "pluginRun" );
@@ -136,7 +136,7 @@ executeAction( idinvokeCommand, desc276, DialogModes.NO );
 
 ```
 
-Filtered and Transpiled
+Result: Filtered and Transpiled
 ```py
 """
 Photoshop ScriptListenerJS to Pyhton
