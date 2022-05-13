@@ -172,7 +172,6 @@ if __name__ == "__main__":
         print('You need to specify the path to be listed')
         sys.exit()
 
-    # exr_file = "K:\\houdini projects\\lg_laboratory\\lg_laboratory_experiments\\render\\sphere_uv\\baseColor.0059.exr"
     exr_file = Path(sys.argv[1])
 
     if not exr_file.is_file():
