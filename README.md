@@ -163,14 +163,6 @@ def dialog(dialog_type="no"):
     dialogs = ps_display_dialogs()
     return dialogs.get(dialog_type, lambda: None)
 
-
-# I've commented below out cause this part doesn't seem to run
-# def newDocument_0():
-#     desc271 = Dispatch("Photoshop.ActionDescriptor")
-#     desc271.PutInteger(s("documentID"),  513)
-#     app.ExecuteAction(s("newDocument"), desc271, dialog())
-# newDocument_0()
-
 def make_1():
     desc273 = Dispatch("Photoshop.ActionDescriptor")
     desc274 = Dispatch("Photoshop.ActionDescriptor")
