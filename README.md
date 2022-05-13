@@ -1,8 +1,8 @@
-# Photoshop scriptlistener to python 
+# Photoshop script listener to python 
 tested: Adobe Photoshop Version: 23.3.2
 os: Windows
 
-Converts Photoshop 'ScriptingListenerJS.log' file into Python single-shot functions you could further explore as reference, edit and customize.
+Converts Photoshop 'ScriptingListenerJS.log' file into Python functions you could further explore as reference, edit and customize.
 Most keys have been converted from charIDs into the more human-readable stringIDs making it more obvious what the action descriptor is doing.
 The generated python file is not made to be run. It may run in some cases but these converted functions are meant to be integrated in your own code.
 
