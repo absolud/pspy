@@ -136,7 +136,7 @@ executeAction( idinvokeCommand, desc276, DialogModes.NO );
 
 ```
 
-Result: Filtered and Transpiled
+result: Filtered and Transpiled
 ```py
 """
 Photoshop ScriptListenerJS to Pyhton
