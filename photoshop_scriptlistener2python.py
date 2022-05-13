@@ -560,7 +560,7 @@ class ScriptLogParser(object):
             export_file = file.write
         # start py doc boilerplate code and indenting
         export_file(Indenter().style(f'"""'))
-        export_file(Indenter().style("Photoshop ScriptListenerJS to Pyhton"))
+        export_file(Indenter().style("Photoshop ScriptListenerJS to Python"))
         # list function names if true
         if names:
             export_file(Indenter().style("- Overview functions"))
