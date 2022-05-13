@@ -1,7 +1,7 @@
 # force_open_exr_io.py
 """
-Simple customized script example of the generated file below.
-Force open exr file with 3DIO in Photoshop and convert to 16b
+Simple customized script example of the generated file below. For demonstration purpose only. 
+Shows how to force open exr file with 3DIO in Photoshop and convert to 16b
 
 command-line example:
 python force_open_exr_io.py "K:\\houdini projects\\lg_laboratory\\lg_laboratory_experiments\\render\\sphere_uv\\baseColor.0059.exr"
