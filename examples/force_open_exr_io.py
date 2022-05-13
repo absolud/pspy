@@ -33,14 +33,6 @@ def dialog(dialog_type="no"):
     dialogs = ps_display_dialogs()
     return dialogs.get(dialog_type, lambda: None)
 
-# todo - add to ignore-list as this does not seem to work
-def newDocument_0():
-    desc5 = Dispatch("Photoshop.ActionDescriptor")
-    desc5.PutInteger(s("documentID"),  489)
-    app.ExecuteAction(s("newDocument"), desc5, dialog())
-
-newDocument_0()
-
 def open_1():
     desc8 = Dispatch("Photoshop.ActionDescriptor")
     desc9 = Dispatch("Photoshop.ActionDescriptor")
