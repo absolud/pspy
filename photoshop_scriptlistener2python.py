@@ -91,7 +91,6 @@ class ScriptLogLoader(object):
             "idhomeScreenVisibilityChanged",
             "idMRUFileListChanged",
             "idtoolModalStateChanged",
-            "invokeCommand",
             "iduiInfo",
             "idfeatureInfo",
             "idowlAction",
