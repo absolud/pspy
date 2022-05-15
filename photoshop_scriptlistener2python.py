@@ -90,7 +90,7 @@ class ScriptLogLoader(object):
             "idinvokeCommand",
             "idhomeScreenVisibilityChanged",
             "idMRUFileListChanged",
-            "idtoolModalStateChanged",
+            #"idtoolModalStateChanged",
             "invokeCommand",
             "iduiInfo",
             "idfeatureInfo",
