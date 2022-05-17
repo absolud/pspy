@@ -215,6 +215,7 @@ Below the ignore-list of entries not relevant to us.
 - "idnglProfileChanged"
 - "idpluginRun"
 - "idnewDocument"
+- "idtoggleBrushesFlyout"
  
 
 ## Collaboration 
