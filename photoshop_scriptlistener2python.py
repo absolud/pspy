@@ -102,7 +102,8 @@ class ScriptLogLoader(object):
             "idAdobeScriptAutomationScripts",
             "idnglProfileChanged",
             "idpluginRun",
-            "idnewDocument"]
+            "idnewDocument",
+            "idtoggleBrushesFlyout"]
 
     def _browse(self):
         allowed_file = "JS.log"
