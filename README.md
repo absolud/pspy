@@ -7,7 +7,20 @@ Most keys have been converted from charIDs into the more human-readable stringID
 The generated python file is not made to be run. It may run in some cases but these converted functions are meant to be integrated in your own code.
 
 ## Usage
+### 01 This script makes use of win32com which is part of the pypiwin32 library
+to access win32.com install the package
 
+```shell
+pip install pypiwin32
+```
+
+### 02 You will need photoshop scriptlistener
+Here a basic intro on how to find and install the scriptlistener
+#### Adobe Script Tutorial 10 Photoshop Scripting Listener Plug-in
+https://youtu.be/x_rMhCz-MdQ
+
+
+### 03 the converter
 Assuming the 'ScriptingListenerJS.log' file is on the Desktop, run the photoshop_scriptlistener2python.py script. 
 Generates 'ScriptingListenerJS_Js2Py.py' on your Desktop
 
