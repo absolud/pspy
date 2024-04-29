@@ -84,9 +84,6 @@ class ScriptLogLoader(object):
 
     def _ignore_list(self):
         return [
-            "idhistoryStateChanged",
-            "idExternalHistoryStateChanged",
-            "idmodalStateChanged",
             "idinvokeCommand",
             "idhomeScreenVisibilityChanged",
             "idMRUFileListChanged",
@@ -102,8 +99,10 @@ class ScriptLogLoader(object):
             "idAdobeScriptAutomationScripts",
             "idnglProfileChanged",
             "idpluginRun",
+            "idowlAction",
             "idnewDocument",
-            "idtoggleBrushesFlyout"]
+            "idtoggleBrushesFlyout",
+            "idpifInvalidatedAttributes"]
 
     def _browse(self):
         allowed_file = "JS.log"
