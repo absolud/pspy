@@ -105,7 +105,7 @@ class ScriptLogLoader(object):
         "idpluginRun",
         "idnewDocument",
         "idtoggleBrushesFlyout",
-        "idbackgroundSaveCompleted",]
+        "idbackgroundSaveCompleted"]
 
     def _browse(self):
         allowed_file = "JS.log"
