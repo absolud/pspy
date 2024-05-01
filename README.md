@@ -195,27 +195,28 @@ make_1()
 
 Below the ignore-list of entries not relevant to us.
 
-- "idhistoryStateChanged"
-- "idExternalHistoryStateChanged"
-- "idmodalStateChanged"
-- "idinvokeCommand"
-- "idhomeScreenVisibilityChanged"
-- "idMRUFileListChanged"
-- "idtoolModalStateChanged"
-- "invokeCommand"
-- "iduiInfo"
-- "idfeatureInfo"
-- "idowlAction"
-- "idlayersFiltered"
-- "idLoadedPluginsNames"
-- "identerModalWorkspace"
-- "idneuralGalleryFilters"
-- "idhostFocusChanged"
-- "idAdobeScriptAutomationScripts"
-- "idnglProfileChanged"
-- "idpluginRun"
-- "idnewDocument"
-- "idtoggleBrushesFlyout"
+        "idhistoryStateChanged",
+        "idExternalHistoryStateChanged",
+        "idmodalStateChanged",
+        "idinvokeCommand",
+        "idhomeScreenVisibilityChanged",
+        "idpifInvalidatedAttributes",
+        "idMRUFileListChanged",
+        "idtoolModalStateChanged",
+        "iduiInfo",
+        "idfeatureInfo",
+        "idowlAction",
+        "idlayersFiltered",
+        "idLoadedPluginsNames",
+        "identerModalWorkspace",
+        "idneuralGalleryFilters",
+        "idhostFocusChanged",
+        "idAdobeScriptAutomationScripts",
+        "idnglProfileChanged",
+        "idpluginRun",
+        "idnewDocument",
+        "idtoggleBrushesFlyout",
+        "idbackgroundSaveCompleted"
  
 
 ## Collaboration 
