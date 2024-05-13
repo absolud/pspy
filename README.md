@@ -25,17 +25,596 @@ python ps_log_converter.py JS.log
 
 ## Example
 02 browse entry:
-As a module the script can be imported and used as a function. Calling main() you can browse to a file for processing. Only terminal command line arguments will support batch conversions.
+If the file path doesn't exist or mistyped you will be asked to browse to a valid log file for processing. 
+The browsing mode only allows for single file conversion.
 
 ## Example
 03 multiple entries:
-
+Only terminal command line arguments will support batch conversions (multiple log files).
 ```shell
 python ps_log_converter.py JS01.log JS02.log JS03.log
 ```
 
+## Example
+original ScriptingListenerJS.log file
+```log
+// =======================================================
+var idLoadedPluginsNames = stringIDToTypeID( "LoadedPluginsNames" );
+    var desc235 = new ActionDescriptor();
+    var idPlgn = charIDToTypeID( "Plgn" );
+        var list3 = new ActionList();
+        list3.putString( """Adaptive Wide Angle...""" );
+        list3.putString( """Average""" );
+        list3.putString( """Camera Raw""" );
+        list3.putString( """Camera Raw Filter""" );
+        list3.putString( """Picture Package Filter...""" );
+        list3.putString( """Matlab Operation""" );
+        list3.putString( """Cineon""" );
+        list3.putString( """Clouds""" );
+        list3.putString( """Difference Clouds""" );
+        list3.putString( """Crop and Straighten Photos""" );
+        list3.putString( """Dicom""" );
+        list3.putString( """Export Color Lookup Tables""" );
+        list3.putString( """Render Color Lookup Grid""" );
+        list3.putString( """FastCore Routines""" );
+        list3.putString( """Filter Gallery...""" );
+        list3.putString( """Colored Pencil...""" );
+        list3.putString( """Cutout...""" );
+        list3.putString( """Dry Brush...""" );
+        list3.putString( """Film Grain...""" );
+        list3.putString( """Fresco...""" );
+        list3.putString( """Neon Glow...""" );
+        list3.putString( """Paint Daubs...""" );
+        list3.putString( """Palette Knife...""" );
+        list3.putString( """Plastic Wrap...""" );
+        list3.putString( """Poster Edges...""" );
+        list3.putString( """Rough Pastels...""" );
+        list3.putString( """Smudge Stick...""" );
+        list3.putString( """Sponge...""" );
+        list3.putString( """Underpainting...""" );
+        list3.putString( """Watercolor...""" );
+        list3.putString( """Accented Edges...""" );
+        list3.putString( """Angled Strokes...""" );
+        list3.putString( """Crosshatch...""" );
+        list3.putString( """Dark Strokes...""" );
+        list3.putString( """Ink Outlines...""" );
+        list3.putString( """Spatter...""" );
+        list3.putString( """Sprayed Strokes...""" );
+        list3.putString( """Sumi-e...""" );
+        list3.putString( """Diffuse Glow...""" );
+        list3.putString( """Glass...""" );
+        list3.putString( """Ocean Ripple...""" );
+        list3.putString( """Bas Relief...""" );
+        list3.putString( """Chalk && Charcoal...""" );
+        list3.putString( """Charcoal...""" );
+        list3.putString( """Chrome...""" );
+        list3.putString( """Cont� Crayon...""" );
+        list3.putString( """Graphic Pen...""" );
+        list3.putString( """Halftone Pattern...""" );
+        list3.putString( """Note Paper...""" );
+        list3.putString( """Photocopy...""" );
+        list3.putString( """Plaster...""" );
+        list3.putString( """Reticulation...""" );
+        list3.putString( """Stamp...""" );
+        list3.putString( """Torn Edges...""" );
+        list3.putString( """Water Paper...""" );
+        list3.putString( """Glowing Edges...""" );
+        list3.putString( """Craquelure...""" );
+        list3.putString( """Grain...""" );
+        list3.putString( """Mosaic Tiles...""" );
+        list3.putString( """Patchwork...""" );
+        list3.putString( """Stained Glass...""" );
+        list3.putString( """Texturizer...""" );
+        list3.putString( """ApplyImageDataFilter""" );
+        list3.putString( """Topaz Gigapixel AI...""" );
+        list3.putString( """GatherImageDataFilter""" );
+        list3.putString( """GoZPlugIn...""" );
+        list3.putString( """Halide Bottlenecks""" );
+        list3.putString( """HDRMergeUI""" );
+        list3.putString( """JPEG 2000""" );
+        list3.putString( """Lens Blur...""" );
+        list3.putString( """Lens Correction...""" );
+        list3.putString( """Liquify...""" );
+        list3.putString( """Parametric Filter""" );
+        list3.putString( """SP Substance Suite""" );
+        list3.putString( """Measurement Core""" );
+        list3.putString( """MMXCore Routines""" );
+        list3.putString( """Multiprocessor Support""" );
+        list3.putString( """NTSC Colors""" );
+        list3.putString( """Portable Bit Map""" );
+        list3.putString( """PCX""" );
+        list3.putString( """Pixar""" );
+        list3.putString( """Radiance""" );
+        list3.putString( """Save for Web...""" );
+        list3.putString( """ScriptingSupport""" );
+        list3.putString( """ScriptListener...""" );
+        list3.putString( """Solarize""" );
+        list3.putString( """Crystallize...""" );
+        list3.putString( """Pointillize...""" );
+        list3.putString( """Pinch...""" );
+        list3.putString( """Extrude...""" );
+        list3.putString( """Fibers...""" );
+        list3.putString( """Lens Flare...""" );
+        list3.putString( """Ripple...""" );
+        list3.putString( """Shear...""" );
+        list3.putString( """Twirl...""" );
+        list3.putString( """Polar Coordinates...""" );
+        list3.putString( """Smart Blur...""" );
+        list3.putString( """Spherize...""" );
+        list3.putString( """Wind...""" );
+        list3.putString( """ZigZag...""" );
+        list3.putString( """Mezzotint...""" );
+        list3.putString( """Radial Blur...""" );
+        list3.putString( """Wave...""" );
+        list3.putString( """Crop and Straighten Photos Filter""" );
+        list3.putString( """De-Interlace...""" );
+        list3.putString( """Displace...""" );
+        list3.putString( """Tiles...""" );
+        list3.putString( """BMP""" );
+        list3.putString( """Targa""" );
+        list3.putString( """IFF Format""" );
+        list3.putString( """HSB/HSL""" );
+        list3.putString( """Paths to Illustrator...""" );
+        list3.putString( """OpenEXR""" );
+        list3.putString( """Color Halftone...""" );
+        list3.putString( """Mean""" );
+        list3.putString( """Summation""" );
+        list3.putString( """Minimum""" );
+        list3.putString( """Maximum""" );
+        list3.putString( """Median""" );
+        list3.putString( """Variance""" );
+        list3.putString( """Standard Deviation""" );
+        list3.putString( """Skewness""" );
+        list3.putString( """Kurtosis""" );
+        list3.putString( """Range""" );
+        list3.putString( """Entropy""" );
+        list3.putString( """Topaz Photo AI...""" );
+        list3.putString( """TPAIApplyImageDataFilter""" );
+        list3.putString( """Topaz Photo AI...""" );
+        list3.putString( """TPAIGatherImageDataFilter""" );
+        list3.putString( """Vanishing Point...""" );
+        list3.putString( """Wireless Bitmap""" );
+        list3.putString( """WIA Support...""" );
+    desc235.putList( idPlgn, list3 );
+executeAction( idLoadedPluginsNames, desc235, DialogModes.NO );
+
+// =======================================================
+var idnewDocument = stringIDToTypeID( "newDocument" );
+    var desc236 = new ActionDescriptor();
+    var idDocI = charIDToTypeID( "DocI" );
+    desc236.putInteger( idDocI, 59 );
+executeAction( idnewDocument, desc236, DialogModes.NO );
+
+// =======================================================
+var idmodalStateChanged = stringIDToTypeID( "modalStateChanged" );
+    var desc237 = new ActionDescriptor();
+    var idLvl = charIDToTypeID( "Lvl " );
+    desc237.putInteger( idLvl, 1 );
+    var idStte = charIDToTypeID( "Stte" );
+    var idStte = charIDToTypeID( "Stte" );
+    var identer = stringIDToTypeID( "enter" );
+    desc237.putEnumerated( idStte, idStte, identer );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc237.putBoolean( idkcanDispatchWhileModal, true );
+    var idTtl = charIDToTypeID( "Ttl " );
+    desc237.putString( idTtl, """Missing Profile""" );
+executeAction( idmodalStateChanged, desc237, DialogModes.NO );
+
+// =======================================================
+var idmodalStateChanged = stringIDToTypeID( "modalStateChanged" );
+    var desc238 = new ActionDescriptor();
+    var idLvl = charIDToTypeID( "Lvl " );
+    desc238.putInteger( idLvl, 0 );
+    var idStte = charIDToTypeID( "Stte" );
+    var idStte = charIDToTypeID( "Stte" );
+    var idexit = stringIDToTypeID( "exit" );
+    desc238.putEnumerated( idStte, idStte, idexit );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc238.putBoolean( idkcanDispatchWhileModal, true );
+    var idTtl = charIDToTypeID( "Ttl " );
+    desc238.putString( idTtl, """Missing Profile""" );
+executeAction( idmodalStateChanged, desc238, DialogModes.NO );
+
+// =======================================================
+var idhistoryStateChanged = stringIDToTypeID( "historyStateChanged" );
+    var desc239 = new ActionDescriptor();
+    var idDocI = charIDToTypeID( "DocI" );
+    desc239.putInteger( idDocI, 59 );
+    var idIdnt = charIDToTypeID( "Idnt" );
+    desc239.putInteger( idIdnt, 61 );
+    var idNm = charIDToTypeID( "Nm  " );
+    desc239.putString( idNm, """Open""" );
+    var idhasEnglish = stringIDToTypeID( "hasEnglish" );
+    desc239.putBoolean( idhasEnglish, true );
+    var idItmI = charIDToTypeID( "ItmI" );
+    desc239.putInteger( idItmI, 1 );
+    var idcommandID = stringIDToTypeID( "commandID" );
+    desc239.putInteger( idcommandID, 0 );
+executeAction( idhistoryStateChanged, desc239, DialogModes.NO );
+
+// =======================================================
+var idhomeScreenVisibilityChanged = stringIDToTypeID( "homeScreenVisibilityChanged" );
+    var desc240 = new ActionDescriptor();
+    var iddontRecord = stringIDToTypeID( "dontRecord" );
+    desc240.putBoolean( iddontRecord, true );
+    var idforceNotify = stringIDToTypeID( "forceNotify" );
+    desc240.putBoolean( idforceNotify, true );
+    var idVsbl = charIDToTypeID( "Vsbl" );
+    desc240.putBoolean( idVsbl, false );
+executeAction( idhomeScreenVisibilityChanged, desc240, DialogModes.NO );
+
+// =======================================================
+var idMRUFileListChanged = stringIDToTypeID( "MRUFileListChanged" );
+    var desc241 = new ActionDescriptor();
+    var iddontRecord = stringIDToTypeID( "dontRecord" );
+    desc241.putBoolean( iddontRecord, true );
+    var idforceNotify = stringIDToTypeID( "forceNotify" );
+    desc241.putBoolean( idforceNotify, true );
+executeAction( idMRUFileListChanged, desc241, DialogModes.NO );
+
+// =======================================================
+var idOpn = charIDToTypeID( "Opn " );
+    var desc242 = new ActionDescriptor();
+    var iddontRecord = stringIDToTypeID( "dontRecord" );
+    desc242.putBoolean( iddontRecord, false );
+    var idforceNotify = stringIDToTypeID( "forceNotify" );
+    desc242.putBoolean( idforceNotify, true );
+    var idnull = charIDToTypeID( "null" );
+    desc242.putPath( idnull, new File( "J:\\appdata\\download\\textures_source\\banana_1_ambientocclusion.png" ) );
+    var idDocI = charIDToTypeID( "DocI" );
+    desc242.putInteger( idDocI, 59 );
+    var idtemplate = stringIDToTypeID( "template" );
+    desc242.putBoolean( idtemplate, false );
+executeAction( idOpn, desc242, DialogModes.NO );
+
+// =======================================================
+var idlayersFiltered = stringIDToTypeID( "layersFiltered" );
+executeAction( idlayersFiltered, undefined, DialogModes.NO );
+
+// =======================================================
+var idinvokeCommand = stringIDToTypeID( "invokeCommand" );
+    var desc243 = new ActionDescriptor();
+    var idcommandID = stringIDToTypeID( "commandID" );
+    desc243.putInteger( idcommandID, 1161 );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc243.putBoolean( idkcanDispatchWhileModal, true );
+executeAction( idinvokeCommand, desc243, DialogModes.NO );
+
+// =======================================================
+var idhistoryStateChanged = stringIDToTypeID( "historyStateChanged" );
+    var desc244 = new ActionDescriptor();
+    var idDocI = charIDToTypeID( "DocI" );
+    desc244.putInteger( idDocI, 59 );
+    var idIdnt = charIDToTypeID( "Idnt" );
+    desc244.putInteger( idIdnt, 64 );
+    var idNm = charIDToTypeID( "Nm  " );
+    desc244.putString( idNm, """8 Bits/Channel""" );
+    var idhasEnglish = stringIDToTypeID( "hasEnglish" );
+    desc244.putBoolean( idhasEnglish, true );
+    var idItmI = charIDToTypeID( "ItmI" );
+    desc244.putInteger( idItmI, 2 );
+    var idcommandID = stringIDToTypeID( "commandID" );
+    desc244.putInteger( idcommandID, 5024 );
+executeAction( idhistoryStateChanged, desc244, DialogModes.NO );
+
+// =======================================================
+var idCnvM = charIDToTypeID( "CnvM" );
+    var desc245 = new ActionDescriptor();
+    var idDpth = charIDToTypeID( "Dpth" );
+    desc245.putInteger( idDpth, 8 );
+    var idMrge = charIDToTypeID( "Mrge" );
+    desc245.putBoolean( idMrge, false );
+executeAction( idCnvM, desc245, DialogModes.NO );
+
+// =======================================================
+var idinvokeCommand = stringIDToTypeID( "invokeCommand" );
+    var desc246 = new ActionDescriptor();
+    var idcommandID = stringIDToTypeID( "commandID" );
+    desc246.putInteger( idcommandID, 32 );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc246.putBoolean( idkcanDispatchWhileModal, true );
+executeAction( idinvokeCommand, desc246, DialogModes.NO );
+
+// =======================================================
+var idmodalStateChanged = stringIDToTypeID( "modalStateChanged" );
+    var desc247 = new ActionDescriptor();
+    var idLvl = charIDToTypeID( "Lvl " );
+    desc247.putInteger( idLvl, 1 );
+    var idStte = charIDToTypeID( "Stte" );
+    var idStte = charIDToTypeID( "Stte" );
+    var identer = stringIDToTypeID( "enter" );
+    desc247.putEnumerated( idStte, idStte, identer );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc247.putBoolean( idkcanDispatchWhileModal, true );
+    var idTtl = charIDToTypeID( "Ttl " );
+    desc247.putString( idTtl, """Save As""" );
+executeAction( idmodalStateChanged, desc247, DialogModes.NO );
+
+// =======================================================
+var idmodalStateChanged = stringIDToTypeID( "modalStateChanged" );
+    var desc248 = new ActionDescriptor();
+    var idLvl = charIDToTypeID( "Lvl " );
+    desc248.putInteger( idLvl, 0 );
+    var idStte = charIDToTypeID( "Stte" );
+    var idStte = charIDToTypeID( "Stte" );
+    var idexit = stringIDToTypeID( "exit" );
+    desc248.putEnumerated( idStte, idStte, idexit );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc248.putBoolean( idkcanDispatchWhileModal, true );
+    var idTtl = charIDToTypeID( "Ttl " );
+    desc248.putString( idTtl, """Save As""" );
+executeAction( idmodalStateChanged, desc248, DialogModes.NO );
+
+// =======================================================
+var idmodalStateChanged = stringIDToTypeID( "modalStateChanged" );
+    var desc249 = new ActionDescriptor();
+    var idLvl = charIDToTypeID( "Lvl " );
+    desc249.putInteger( idLvl, 1 );
+    var idStte = charIDToTypeID( "Stte" );
+    var idStte = charIDToTypeID( "Stte" );
+    var identer = stringIDToTypeID( "enter" );
+    desc249.putEnumerated( idStte, idStte, identer );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc249.putBoolean( idkcanDispatchWhileModal, true );
+    var idTtl = charIDToTypeID( "Ttl " );
+    desc249.putString( idTtl, """PNG Format Options""" );
+executeAction( idmodalStateChanged, desc249, DialogModes.NO );
+
+// =======================================================
+var idmodalStateChanged = stringIDToTypeID( "modalStateChanged" );
+    var desc250 = new ActionDescriptor();
+    var idLvl = charIDToTypeID( "Lvl " );
+    desc250.putInteger( idLvl, 0 );
+    var idStte = charIDToTypeID( "Stte" );
+    var idStte = charIDToTypeID( "Stte" );
+    var idexit = stringIDToTypeID( "exit" );
+    desc250.putEnumerated( idStte, idStte, idexit );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc250.putBoolean( idkcanDispatchWhileModal, true );
+    var idTtl = charIDToTypeID( "Ttl " );
+    desc250.putString( idTtl, """PNG Format Options""" );
+executeAction( idmodalStateChanged, desc250, DialogModes.NO );
+
+// =======================================================
+var idsave = charIDToTypeID( "save" );
+    var desc251 = new ActionDescriptor();
+    var idAs = charIDToTypeID( "As  " );
+        var desc252 = new ActionDescriptor();
+        var idMthd = charIDToTypeID( "Mthd" );
+        var idPNGMethod = stringIDToTypeID( "PNGMethod" );
+        var idquick = stringIDToTypeID( "quick" );
+        desc252.putEnumerated( idMthd, idPNGMethod, idquick );
+        var idPGIT = charIDToTypeID( "PGIT" );
+        var idPGIT = charIDToTypeID( "PGIT" );
+        var idPGIN = charIDToTypeID( "PGIN" );
+        desc252.putEnumerated( idPGIT, idPGIT, idPGIN );
+        var idPNGf = charIDToTypeID( "PNGf" );
+        var idPNGf = charIDToTypeID( "PNGf" );
+        var idPGAd = charIDToTypeID( "PGAd" );
+        desc252.putEnumerated( idPNGf, idPNGf, idPGAd );
+        var idCmpr = charIDToTypeID( "Cmpr" );
+        desc252.putInteger( idCmpr, 6 );
+        var idembedIccProfileLastState = stringIDToTypeID( "embedIccProfileLastState" );
+        var idembedOff = stringIDToTypeID( "embedOff" );
+        var idembedOn = stringIDToTypeID( "embedOn" );
+        desc252.putEnumerated( idembedIccProfileLastState, idembedOff, idembedOn );
+    var idPNGF = charIDToTypeID( "PNGF" );
+    desc251.putObject( idAs, idPNGF, desc252 );
+    var idIn = charIDToTypeID( "In  " );
+    desc251.putPath( idIn, new File( "E:\\caches\\desktop\\banana_1_ambientocclusion.png" ) );
+    var idDocI = charIDToTypeID( "DocI" );
+    desc251.putInteger( idDocI, 59 );
+    var idLwCs = charIDToTypeID( "LwCs" );
+    desc251.putBoolean( idLwCs, true );
+    var idEmbP = charIDToTypeID( "EmbP" );
+    desc251.putBoolean( idEmbP, true );
+    var idsaveStage = stringIDToTypeID( "saveStage" );
+    var idsaveStageType = stringIDToTypeID( "saveStageType" );
+    var idsaveBegin = stringIDToTypeID( "saveBegin" );
+    desc251.putEnumerated( idsaveStage, idsaveStageType, idsaveBegin );
+executeAction( idsave, desc251, DialogModes.NO );
+
+// =======================================================
+var idsave = charIDToTypeID( "save" );
+    var desc253 = new ActionDescriptor();
+    var idAs = charIDToTypeID( "As  " );
+        var desc254 = new ActionDescriptor();
+        var idMthd = charIDToTypeID( "Mthd" );
+        var idPNGMethod = stringIDToTypeID( "PNGMethod" );
+        var idquick = stringIDToTypeID( "quick" );
+        desc254.putEnumerated( idMthd, idPNGMethod, idquick );
+        var idPGIT = charIDToTypeID( "PGIT" );
+        var idPGIT = charIDToTypeID( "PGIT" );
+        var idPGIN = charIDToTypeID( "PGIN" );
+        desc254.putEnumerated( idPGIT, idPGIT, idPGIN );
+        var idPNGf = charIDToTypeID( "PNGf" );
+        var idPNGf = charIDToTypeID( "PNGf" );
+        var idPGAd = charIDToTypeID( "PGAd" );
+        desc254.putEnumerated( idPNGf, idPNGf, idPGAd );
+        var idCmpr = charIDToTypeID( "Cmpr" );
+        desc254.putInteger( idCmpr, 6 );
+        var idembedIccProfileLastState = stringIDToTypeID( "embedIccProfileLastState" );
+        var idembedOff = stringIDToTypeID( "embedOff" );
+        var idembedOn = stringIDToTypeID( "embedOn" );
+        desc254.putEnumerated( idembedIccProfileLastState, idembedOff, idembedOn );
+    var idPNGF = charIDToTypeID( "PNGF" );
+    desc253.putObject( idAs, idPNGF, desc254 );
+    var idIn = charIDToTypeID( "In  " );
+    desc253.putPath( idIn, new File( "E:\\caches\\desktop\\banana_1_ambientocclusion.png" ) );
+    var idDocI = charIDToTypeID( "DocI" );
+    desc253.putInteger( idDocI, 59 );
+    var idLwCs = charIDToTypeID( "LwCs" );
+    desc253.putBoolean( idLwCs, true );
+    var idEmbP = charIDToTypeID( "EmbP" );
+    desc253.putBoolean( idEmbP, true );
+    var idsaveStage = stringIDToTypeID( "saveStage" );
+    var idsaveStageType = stringIDToTypeID( "saveStageType" );
+    var idsaveSucceeded = stringIDToTypeID( "saveSucceeded" );
+    desc253.putEnumerated( idsaveStage, idsaveStageType, idsaveSucceeded );
+executeAction( idsave, desc253, DialogModes.NO );
+
+// =======================================================
+var idMRUFileListChanged = stringIDToTypeID( "MRUFileListChanged" );
+    var desc255 = new ActionDescriptor();
+    var iddontRecord = stringIDToTypeID( "dontRecord" );
+    desc255.putBoolean( iddontRecord, true );
+    var idforceNotify = stringIDToTypeID( "forceNotify" );
+    desc255.putBoolean( idforceNotify, true );
+executeAction( idMRUFileListChanged, desc255, DialogModes.NO );
+
+// =======================================================
+var idbackgroundSaveCompleted = stringIDToTypeID( "backgroundSaveCompleted" );
+    var desc256 = new ActionDescriptor();
+    var idDocI = charIDToTypeID( "DocI" );
+    desc256.putInteger( idDocI, 59 );
+    var idsaveScheduleMode = stringIDToTypeID( "saveScheduleMode" );
+    desc256.putString( idsaveScheduleMode, """auto""" );
+    var iddontRecord = stringIDToTypeID( "dontRecord" );
+    desc256.putBoolean( iddontRecord, true );
+    var idforceNotify = stringIDToTypeID( "forceNotify" );
+    desc256.putBoolean( idforceNotify, true );
+executeAction( idbackgroundSaveCompleted, desc256, DialogModes.NO );
+
+// =======================================================
+var idCls = charIDToTypeID( "Cls " );
+    var desc257 = new ActionDescriptor();
+    var idDocI = charIDToTypeID( "DocI" );
+    desc257.putInteger( idDocI, 59 );
+    var idforceNotify = stringIDToTypeID( "forceNotify" );
+    desc257.putBoolean( idforceNotify, true );
+executeAction( idCls, desc257, DialogModes.NO );
+
+// =======================================================
+var idhomeScreenVisibilityChanged = stringIDToTypeID( "homeScreenVisibilityChanged" );
+    var desc258 = new ActionDescriptor();
+    var iddontRecord = stringIDToTypeID( "dontRecord" );
+    desc258.putBoolean( iddontRecord, true );
+    var idforceNotify = stringIDToTypeID( "forceNotify" );
+    desc258.putBoolean( idforceNotify, true );
+    var idVsbl = charIDToTypeID( "Vsbl" );
+    desc258.putBoolean( idVsbl, true );
+executeAction( idhomeScreenVisibilityChanged, desc258, DialogModes.NO );
+
+// =======================================================
+var idinvokeCommand = stringIDToTypeID( "invokeCommand" );
+    var desc259 = new ActionDescriptor();
+    var idcommandID = stringIDToTypeID( "commandID" );
+    desc259.putInteger( idcommandID, -687 );
+    var idkcanDispatchWhileModal = stringIDToTypeID( "kcanDispatchWhileModal" );
+    desc259.putBoolean( idkcanDispatchWhileModal, true );
+executeAction( idinvokeCommand, desc259, DialogModes.NO );
 
 
+
+````
+
+The converter extracts only the useful parts and ignores events found in our ignore list
+
+```py
+###########################################################
+# Required boilerplate code
+###########################################################
+
+
+from win32com.client import Dispatch
+
+
+app = Dispatch("Photoshop.Application")
+
+def s(name):
+    """convert string name into type id"""
+    return app.StringIDToTypeID(f"{name}")
+
+
+def c(name):
+    """convert char name into type id"""
+    return app.CharIDToTypeID(f"{name}")
+
+
+def _ps_display_dialogs():
+    """Dictionary with dialog constants"""
+    return {"all": 1, "error": 2, "no": 3}
+
+
+def dialog(dialog_type="no"):
+    """Photoshop dialog windows settings using "all": 1, "error": 2, "no": 3"""
+    dialogs = _ps_display_dialogs()
+    return dialogs.get(dialog_type, lambda: None)
+
+
+###########################################################
+# Generated JS to Python Action manager code
+###########################################################
+
+
+def open_0():
+    desc242 = Dispatch("Photoshop.ActionDescriptor")
+    desc242.PutBoolean(s("dontRecord"),  False)
+    desc242.PutBoolean(s("forceNotify"),  True)
+    desc242.PutPath(s("target"), "J:\\appdata\\download\\textures_source\\banana_1_ambientocclusion.png")
+    desc242.PutInteger(s("documentID"),  59)
+    desc242.PutBoolean(s("template"),  False)
+    app.ExecuteAction(s("open"), desc242, dialog())
+
+open_0()
+
+
+def convertMode_1():
+    desc245 = Dispatch("Photoshop.ActionDescriptor")
+    desc245.PutInteger(s("depth"),  8)
+    desc245.PutBoolean(s("merge"),  False)
+    app.ExecuteAction(s("convertMode"), desc245, dialog())
+
+convertMode_1()
+
+
+def save_2():
+    desc251 = Dispatch("Photoshop.ActionDescriptor")
+    desc252 = Dispatch("Photoshop.ActionDescriptor")
+    desc252.PutEnumerated(s("method"), s("PNGMethod"), s("quick"))
+    desc252.PutEnumerated(s("PNGInterlaceType"), s("PNGInterlaceType"), s("PNGInterlaceNone"))
+    desc252.PutEnumerated(s("PNGFilter"), s("PNGFilter"), s("PNGFilterAdaptive"))
+    desc252.PutInteger(s("compression"),  6)
+    desc252.PutEnumerated(s("embedIccProfileLastState"), s("embedOff"), s("embedOn"))
+    desc251.PutObject(s("as"), s("PNGFormat"),  desc252)
+    desc251.PutPath(s("in"), "E:\\caches\\desktop\\banana_1_ambientocclusion.png")
+    desc251.PutInteger(s("documentID"),  59)
+    desc251.PutBoolean(s("lowerCase"),  True)
+    desc251.PutBoolean(s("embedProfiles"),  True)
+    desc251.PutEnumerated(s("saveStage"), s("saveStageType"), s("saveBegin"))
+    app.ExecuteAction(s("save"), desc251, dialog())
+
+save_2()
+
+
+def save_3():
+    desc253 = Dispatch("Photoshop.ActionDescriptor")
+    desc254 = Dispatch("Photoshop.ActionDescriptor")
+    desc254.PutEnumerated(s("method"), s("PNGMethod"), s("quick"))
+    desc254.PutEnumerated(s("PNGInterlaceType"), s("PNGInterlaceType"), s("PNGInterlaceNone"))
+    desc254.PutEnumerated(s("PNGFilter"), s("PNGFilter"), s("PNGFilterAdaptive"))
+    desc254.PutInteger(s("compression"),  6)
+    desc254.PutEnumerated(s("embedIccProfileLastState"), s("embedOff"), s("embedOn"))
+    desc253.PutObject(s("as"), s("PNGFormat"),  desc254)
+    desc253.PutPath(s("in"), "E:\\caches\\desktop\\banana_1_ambientocclusion.png")
+    desc253.PutInteger(s("documentID"),  59)
+    desc253.PutBoolean(s("lowerCase"),  True)
+    desc253.PutBoolean(s("embedProfiles"),  True)
+    desc253.PutEnumerated(s("saveStage"), s("saveStageType"), s("saveSucceeded"))
+    app.ExecuteAction(s("save"), desc253, dialog())
+
+save_3()
+
+
+def close_4():
+    desc257 = Dispatch("Photoshop.ActionDescriptor")
+    desc257.PutInteger(s("documentID"),  59)
+    desc257.PutBoolean(s("forceNotify"),  True)
+    app.ExecuteAction(s("close"), desc257, dialog())
+
+close_4()
+
+```
 
 
 # PREVIOUS VERSION Photoshop script listener to python 
