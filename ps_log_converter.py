@@ -16,18 +16,22 @@ from win32com.client import Dispatch
 # PS LOG CONVERTER
 ###########################################################
 ''' 
-This script processes log files and converts JS events to Python functions. This is a renewed version compared to "photoshop_scriptlistener2python.py" script.
+This script processes Photoshop's ScriptListener log files and converts PS events into human readable Python functions. This is a renewed version compared to "photoshop_scriptlistener2python.py" script.
 Improvements include:
-- better handling of xmpmeta entries
-- exluded events are now stored in a JSON file and loaded independently "excluded_events.json"
-- better handling of file paths
-- better handling of terminal arguments
-- new name for the script "ps_log_converter.py"
-- python scripts are now stored in a separate folder "__temp"
-- log files are sanitzed and saved in the "__temp" folder than removed after processing
+
+    added typing and docstring to the functions
+    better handling of xmpmeta entries
+    excluded events are now stored in a JSON file and loaded independently "excluded_events.json"
+    better handling of file paths
+    better handling of terminal arguments
+    new name for the script "ps_log_converter.py"
+    log files are sanitzed and saved in the "__temp" folder than removed after processing
+    python scripts are now stored in a separate folder "__temp"
 
 ATTENTION:
-There is always a chance if the script stops working that a new event has been introduced in Photoshop. In this case, whatever this event name is, it should be added to the ignore list.
+
+    excluded_events.json has to be present for the script to run
+    There is always a chance if the script stops working that a new event has been introduced in Photoshop. In this case, whatever this event name is, it should be added to the ignore list.
 
 Example:
 01 entry:            python ps_log_converter.py "JS.log"
