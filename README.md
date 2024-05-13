@@ -10,7 +10,7 @@ This script processes Photoshop's ScriptListener log files and converts PS event
 - better handling of xmpmeta entries
 - excluded events are now stored in a JSON file and loaded independently "excluded_events.json"
 - better handling of file paths
-- better handling of terminal arguments
+- better handling of commandline arguments
 - new name for the script "ps_log_converter.py"
 - log files are sanitzed and saved in the "__temp" folder than removed after processing
 - python scripts are now stored in a separate folder "__temp"
