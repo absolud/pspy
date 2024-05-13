@@ -1,7 +1,44 @@
-# Photoshop script listener to python 
-tested: Adobe Photoshop Version: 23.3.2
+# PS LOG CONVERTER
+tested: Adobe Photoshop Version: 25.9.0
 os: Windows
 
+## CURRENT VERSION
+This script processes log files and converts JS events to Python functions. This is a renewed version compared to "photoshop_scriptlistener2python.py" script.
+Improvements include:
+- better handling of xmpmeta entries
+- exluded events are now stored in a JSON file and loaded independently "excluded_events.json"
+- better handling of file paths
+- better handling of terminal arguments
+- new name for the script "ps_log_converter.py"
+- python scripts are now stored in a separate folder "__temp"
+- log files are sanitzed and saved in the "__temp" folder than removed after processing
+
+### ATTENTION:
+- excluded_events.json has to be present for the script to run
+- There is always a chance if the script stops working that a new event has been introduced in Photoshop. In this case, whatever this event name is, it should be added to the ignore list.
+
+## Example
+01 single entry:
+```shell
+python ps_log_converter.py JS.log
+```
+
+## Example
+02 browse entry:
+As a module the script can be imported and used as a function. Calling main() you can browse to a file for processing. Only terminal command line arguments will support batch conversions.
+
+## Example
+03 multiple entries:
+
+```shell
+python ps_log_converter.py JS01.log JS02.log JS03.log
+```
+
+
+
+
+
+# PREVIOUS VERSION Photoshop script listener to python 
 Converts Photoshop 'ScriptingListenerJS.log' file into Python functions you could further explore as reference, edit and customize.
 Most keys have been converted from charIDs into the more human-readable stringIDs making it more obvious what the action descriptor is doing.
 The generated python file is not made to be run. It may run in some cases but these converted functions are meant to be integrated in your own code.
