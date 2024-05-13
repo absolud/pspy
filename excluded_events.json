@@ -1,0 +1,28 @@
+{
+    "excluded_events": [
+        "idhistoryStateChanged",
+        "idExternalHistoryStateChanged",
+        "idmodalStateChanged",
+        "idinvokeCommand",
+        "idhomeScreenVisibilityChanged",
+        "idpifInvalidatedAttributes",
+        "idMRUFileListChanged",
+        "idtoolModalStateChanged",
+        "iduiInfo",
+        "idfeatureInfo",
+        "idowlAction",
+        "idlayersFiltered",
+        "idLoadedPluginsNames",
+        "identerModalWorkspace",
+        "idneuralGalleryFilters",
+        "idhostFocusChanged",
+        "idAdobeScriptAutomationScripts",
+        "idnglProfileChanged",
+        "idpluginRun",
+        "idnewDocument",
+        "idtoggleBrushesFlyout",
+        "idbackgroundSaveCompleted",
+        "idmodalJavaScriptScopeEnter",
+        "idmodalJavaScriptScopeExit"
+    ]
+}
