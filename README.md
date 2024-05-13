@@ -510,7 +510,7 @@ executeAction( idinvokeCommand, desc259, DialogModes.NO );
 
 ````
 
-The converter extracts only the useful parts and ignores events found in our ignore list
+The converter extracts only the useful parts and ignores events found in our excluded_events.json
 
 ```py
 ###########################################################
