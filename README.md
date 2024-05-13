@@ -618,6 +618,7 @@ close_4()
 
 
 # PREVIOUS VERSION Photoshop script listener to python 
+You can find this file in the 'old' folder.
 Converts Photoshop 'ScriptingListenerJS.log' file into Python functions you could further explore as reference, edit and customize.
 Most keys have been converted from charIDs into the more human-readable stringIDs making it more obvious what the action descriptor is doing.
 The generated python file is not made to be run. It may run in some cases but these converted functions are meant to be integrated in your own code.
