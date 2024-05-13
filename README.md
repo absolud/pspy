@@ -6,7 +6,7 @@ os: Windows
 This script processes log files and converts JS events to Python functions. This is a renewed version compared to "photoshop_scriptlistener2python.py" script.
 Improvements include:
 - better handling of xmpmeta entries
-- exluded events are now stored in a JSON file and loaded independently "excluded_events.json"
+- excluded events are now stored in a JSON file and loaded independently "excluded_events.json"
 - better handling of file paths
 - better handling of terminal arguments
 - new name for the script "ps_log_converter.py"
