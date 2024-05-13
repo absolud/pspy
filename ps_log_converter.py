@@ -11,14 +11,14 @@ from tkinter.filedialog import askopenfilename
 from win32com.client import Dispatch
 
 
-
 ###########################################################
 # PS LOG CONVERTER
 ###########################################################
 ''' 
-This script processes Photoshop's ScriptListener log files and converts PS events into human readable Python functions. This is a renewed version compared to "photoshop_scriptlistener2python.py" script.
-Improvements include:
+This script processes Photoshop's ScriptListener log files and converts PS events into human readable Python functions. 
+This is a renewed version compared to "photoshop_scriptlistener2python.py" script.
 
+Improvements include:
     added typing and docstring to the functions
     better handling of xmpmeta entries
     excluded events are now stored in a JSON file and loaded independently "excluded_events.json"
@@ -29,20 +29,19 @@ Improvements include:
     python scripts are now stored in a separate folder "__temp"
 
 ATTENTION:
-
     excluded_events.json has to be present for the script to run
     There is always a chance if the script stops working that a new event has been introduced in Photoshop. In this case, whatever this event name is, it should be added to the ignore list.
 
-Example:
-01 entry:            python ps_log_converter.py "JS.log"
+Example
+01 single entry:
+python ps_log_converter.py JS.log
 
-As a module the script can be imported and used as a function. Calling main() you can browse to a file for processing.
-Only terminal command line arguments will support batch conversions.
+Example
+02 browse entry: If the file path doesn't exist or mistyped you will be asked to browse to a valid log file for processing. The browsing mode only allows for single file conversion.
 
-Example:
-02 multiple entries: python ps_log_converter.py "JS.log" JS2.log JS2.log
-
-
+Example
+03 multiple entries: Only terminal command line arguments will support batch conversions (multiple log files).
+python ps_log_converter.py JS01.log JS02.log JS03.log
 '''
 ###########################################################
 
