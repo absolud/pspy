@@ -454,7 +454,7 @@ def _convert_lines(lines: Generator[str, None, None], event_id: int) -> Generato
         if "DialogModes" in last_line:
             last_line = last_line.replace("DialogModes.NO", "dialog()")
         if "undefined" in last_line:
-            last_line = last_line.replace("undefined", "'None'")
+            last_line = last_line.replace("undefined", "None")
 
         yield indent.style(last_line)
         yield Indenter().style('')
